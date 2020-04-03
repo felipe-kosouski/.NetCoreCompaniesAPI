@@ -1,0 +1,188 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/CompanyEmployees.csproj": {}
+  },
+  "projects": {
+    "/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/CompanyEmployees.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/CompanyEmployees.csproj",
+        "projectName": "CompanyEmployees",
+        "projectPath": "/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/CompanyEmployees.csproj",
+        "packagesPath": "/Users/felipekosouski/.nuget/packages/",
+        "outputPath": "/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/felipekosouski/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/LoggerService/LoggerService.csproj": {
+                "projectPath": "/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/LoggerService/LoggerService.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/Contracts/Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/Contracts/Contracts.csproj",
+        "projectName": "Contracts",
+        "projectPath": "/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/Contracts/Contracts.csproj",
+        "packagesPath": "/Users/felipekosouski/.nuget/packages/",
+        "outputPath": "/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/Contracts/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/felipekosouski/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/LoggerService/LoggerService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/LoggerService/LoggerService.csproj",
+        "projectName": "LoggerService",
+        "projectPath": "/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/LoggerService/LoggerService.csproj",
+        "packagesPath": "/Users/felipekosouski/.nuget/packages/",
+        "outputPath": "/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/LoggerService/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/felipekosouski/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/Contracts/Contracts.csproj": {
+                "projectPath": "/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/Contracts/Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "NLog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[1.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
