@@ -1,4 +1,5 @@
 using CompanyEmployees.Data.Context;
+using CompanyEmployees.Data.Repository;
 using Contracts;
 using LoggerService;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +23,10 @@ namespace CompanyEmployees.Extensions
 			services.AddScoped<ILoggerManager, LoggerManager>();
 
 		public static void ConfigureSqlContext(this IServiceCollection services, IConfiguration configuration) =>
-			services.AddDbContext<RepositoryContext>(options => 
+			services.AddDbContext<RepositoryContext>(options =>
 				options.UseSqlServer(configuration.GetConnectionString("sqlConnection")));
+
+		public static void ConfigureRepositoryManager(this IServiceCollection services) =>
+			services.AddScoped<IRepositoryManager, RepositoryManager>();
 	}
 }

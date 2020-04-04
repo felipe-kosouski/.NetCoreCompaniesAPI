@@ -12,6 +12,8 @@ namespace CompanyEmployees.Controllers
 	[Route("[controller]")]
 	public class WeatherForecastController : ControllerBase
 	{
+		private readonly IRepositoryManager _repository;
+
 		private static readonly string[] Summaries = new[]
 		{
 			"Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -19,14 +21,16 @@ namespace CompanyEmployees.Controllers
 
 		private ILoggerManager _logger;
 
-		public WeatherForecastController(ILoggerManager logger)
+		public WeatherForecastController(ILoggerManager logger, IRepositoryManager repository)
 		{
 			_logger = logger;
+			_repository = repository;
 		}
 
 		[HttpGet]
 		public IEnumerable<string> Get()
 		{
+			
 			_logger.LogInfo("Here is info message from our values controller.");
 			_logger.LogDebug("Here is debug message from our values controller.");
 			_logger.LogWarn("Here is warn message from our values controller.");
