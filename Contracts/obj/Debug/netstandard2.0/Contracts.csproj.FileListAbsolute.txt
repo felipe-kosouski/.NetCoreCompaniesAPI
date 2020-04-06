@@ -1,8 +1,0 @@
-/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/Contracts/bin/Debug/netstandard2.0/Contracts.deps.json
-/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/Contracts/bin/Debug/netstandard2.0/Contracts.dll
-/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/Contracts/bin/Debug/netstandard2.0/Contracts.pdb
-/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/Contracts/obj/Debug/netstandard2.0/Contracts.csprojAssemblyReference.cache
-/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/Contracts/obj/Debug/netstandard2.0/Contracts.AssemblyInfoInputs.cache
-/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/Contracts/obj/Debug/netstandard2.0/Contracts.AssemblyInfo.cs
-/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/Contracts/obj/Debug/netstandard2.0/Contracts.dll
-/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/Contracts/obj/Debug/netstandard2.0/Contracts.pdb
