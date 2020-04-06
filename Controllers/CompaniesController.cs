@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using CompanyEmployees.Dtos;
+using Contracts;
 using Microsoft.AspNetCore.Mvc;
 //using CompanyEmployees.Models;
 
@@ -11,15 +14,32 @@ namespace CompanyEmployees.Controllers
 	[ApiController]
 	public class CompaniesController : ControllerBase
 	{
-		public CompaniesController()
+		private readonly IRepositoryManager _repository;
+		private readonly ILoggerManager _logger;
+		private readonly IMapper _mapper;
+
+		public CompaniesController(IRepositoryManager repository, ILoggerManager logger, IMapper mapper)
 		{
+			_repository = repository;
+			_logger = logger;
+			_mapper = mapper;
 		}
 
 		// GET api/companies
-		[HttpGet("")]
-		public ActionResult<IEnumerable<string>> Getstrings()
+		[HttpGet]
+		public ActionResult GetCompanies()
 		{
-			return new List<string> { };
+			try
+			{
+				var companies = _repository.Company.GetAllCompanies(trackChanges: false);
+				var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(companies);
+				return Ok(companiesDto);
+			}
+			catch (System.Exception ex)
+			{
+				_logger.LogError($"Something went wrong in the {nameof(GetCompanies)} action {ex}");
+				return StatusCode(500, "Internal Server Error");
+			}
 		}
 
 		// GET api/companies/5

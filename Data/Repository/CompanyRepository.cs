@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections.Generic;
 using CompanyEmployees.Data.Context;
 using CompanyEmployees.Models;
@@ -13,7 +14,7 @@ namespace CompanyEmployees.Data.Repository
 
 		public IEnumerable<Company> GetAllCompanies(bool trackChanges)
 		{
-			throw new System.NotImplementedException();
+			return FindAll(trackChanges).OrderBy(x => x.Name).ToList();
 		}
 	}
 }

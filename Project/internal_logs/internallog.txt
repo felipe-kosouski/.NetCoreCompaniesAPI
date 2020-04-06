@@ -783,3 +783,462 @@
 2020-04-03 19:53:36.9340 Trace Closing Layout Renderer: ${message}
 2020-04-03 19:53:36.9350 Debug Finished closing logging configuration.
 2020-04-03 19:53:36.9350 Info Logger has been shut down.
+2020-04-06 20:02:53.8934 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-04-06 20:02:53.9474 Debug Found assembly location directory: '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-04-06 20:02:53.9483 Debug Search for auto loading files in location: /Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1
+2020-04-06 20:02:53.9525 Debug Start auto loading, location: /Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1
+2020-04-06 20:02:53.9539 Info Auto loading assembly file: /Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1/NLog.Extensions.Logging.dll
+2020-04-06 20:02:53.9539 Info Loading assembly file: /Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1/NLog.Extensions.Logging.dll
+2020-04-06 20:02:53.9676 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.6.2.1321. Product version: 1.6.2.
+2020-04-06 20:02:53.9676 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-04-06 20:02:53.9693 Info Auto loading assembly file: /Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1/NLog.Extensions.Logging.dll succeeded!
+2020-04-06 20:02:53.9712 Trace Assembly 'Microsoft.Extensions.Logging, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2020-04-06 20:02:53.9717 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2020-04-06 20:02:53.9717 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2020-04-06 20:02:53.9717 Debug Auto loading done
+2020-04-06 20:02:53.9726 Info Message Template Auto Format enabled
+2020-04-06 20:02:53.9838 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:02:53.9854 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-06 20:02:53.9889 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-04-06 20:02:53.9958 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2020-04-06 20:02:53.9958 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:02:53.9958 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:02:53.9972 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:02:53.9972 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-06 20:02:54.0002 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-04-06 20:02:54.0002 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-06 20:02:54.0008 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:02:54.0008 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:02:54.0016 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:02:54.0016 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-04-06 20:02:54.0016 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:02:54.0016 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-06 20:02:54.0079 Debug Setting 'FileTarget.name' to 'logfile'
+2020-04-06 20:02:54.0085 Debug Setting 'FileTarget.fileName' to '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt'
+2020-04-06 20:02:54.0085 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:02:54.0085 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2020-04-06 20:02:54.0100 Debug Setting 'FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2020-04-06 20:02:54.0100 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:02:54.0100 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-06 20:02:54.0107 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-04-06 20:02:54.0107 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2020-04-06 20:02:54.0107 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:02:54.0107 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:02:54.0107 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:02:54.0116 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-06 20:02:54.0116 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-04-06 20:02:54.0116 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-06 20:02:54.0116 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:02:54.0116 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:02:54.0116 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:02:54.0127 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-06 20:02:54.0127 Info Adding target FileTarget(Name=logfile)
+2020-04-06 20:02:54.0135 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-04-06 20:02:54.0135 Trace ParseRulesElement
+2020-04-06 20:02:54.0227 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2020-04-06 20:02:54.0261 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2020-04-06 20:02:54.0921 Debug Watching path '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees' filter 'nlog.config' for changes.
+2020-04-06 20:02:54.0933 Debug --- NLog configuration dump ---
+2020-04-06 20:02:54.0993 Debug Targets:
+2020-04-06 20:02:54.1000 Debug File Target[logfile]
+2020-04-06 20:02:54.1000 Debug Rules:
+2020-04-06 20:02:54.1024 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-04-06 20:02:54.1026 Debug --- End of NLog configuration dump ---
+2020-04-06 20:02:54.1061 Trace FindReachableObject<System.Object>:
+2020-04-06 20:02:54.1061 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2020-04-06 20:02:54.1066 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2020-04-06 20:02:54.1066 Trace  Scanning FileTarget 'File Target[logfile]'
+2020-04-06 20:02:54.1066 Trace   Scanning Property FileName ''/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt'' NLog.Layouts
+2020-04-06 20:02:54.1066 Trace   Scanning SimpleLayout ''/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt''
+2020-04-06 20:02:54.1077 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:02:54.1077 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:02:54.1077 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2020-04-06 20:02:54.1086 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:02:54.1086 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2020-04-06 20:02:54.1086 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2020-04-06 20:02:54.1086 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:02:54.1096 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-06 20:02:54.1096 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:02:54.1096 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-06 20:02:54.1096 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-04-06 20:02:54.1096 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-06 20:02:54.1106 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:02:54.1106 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:02:54.1106 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:02:54.1106 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-06 20:02:54.1117 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2020-04-06 20:02:54.1117 Trace   Scanning Property Encoding 'System.Text.UTF8Encoding+UTF8EncodingSealed' System.Text
+2020-04-06 20:02:54.1128 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2020-04-06 20:02:54.1128 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2020-04-06 20:02:54.1128 Info Found 14 configuration items
+2020-04-06 20:02:54.1146 Trace Initializing Layout Renderer: ${message}
+2020-04-06 20:02:54.1146 Trace Initializing Layout Renderer: ${literal}
+2020-04-06 20:02:54.1146 Trace Initializing Layout Renderer: ${level}
+2020-04-06 20:02:54.1156 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2020-04-06 20:02:54.1173 Trace FindReachableObject<System.Object>:
+2020-04-06 20:02:54.1175 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-06 20:02:54.1175 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:02:54.1175 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:02:54.1223 Trace Initializing Layout Renderer: ${uppercase}
+2020-04-06 20:02:54.1227 Trace Initializing Layout Renderer: ${literal}
+2020-04-06 20:02:54.1227 Trace Initializing Layout Renderer: ${longdate}
+2020-04-06 20:02:54.1227 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2020-04-06 20:02:54.1227 Trace FindReachableObject<System.Object>:
+2020-04-06 20:02:54.1227 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2020-04-06 20:02:54.1236 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:02:54.1236 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-06 20:02:54.1236 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:02:54.1236 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-06 20:02:54.1236 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-04-06 20:02:54.1246 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-06 20:02:54.1246 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:02:54.1246 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:02:54.1255 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:02:54.1255 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-06 20:02:54.1255 Trace Initializing Layout Renderer: ${literal}
+2020-04-06 20:02:54.1255 Trace Initializing Layout Renderer: ${shortdate}
+2020-04-06 20:02:54.1266 Trace Initializing Layout Renderer: ${literal}
+2020-04-06 20:02:54.1266 Trace Initializing '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt'
+2020-04-06 20:02:54.1266 Trace FindReachableObject<System.Object>:
+2020-04-06 20:02:54.1266 Trace Scanning SimpleLayout ''/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt''
+2020-04-06 20:02:54.1266 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:02:54.1276 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:02:54.1276 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2020-04-06 20:02:54.1276 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:02:54.1276 Trace Initializing File Target[logfile]
+2020-04-06 20:02:54.1296 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-04-06 20:02:54.1296 Trace Scanning FileTarget 'File Target[logfile]'
+2020-04-06 20:02:54.1296 Trace  Scanning Property FileName ''/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt'' NLog.Layouts
+2020-04-06 20:02:54.1296 Trace  Scanning SimpleLayout ''/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt''
+2020-04-06 20:02:54.1296 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2020-04-06 20:02:54.1306 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2020-04-06 20:02:54.1306 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2020-04-06 20:02:54.1306 Trace  Scanning Property Encoding 'System.Text.UTF8Encoding+UTF8EncodingSealed' System.Text
+2020-04-06 20:02:54.1306 Trace File Target[logfile] has 2 layouts
+2020-04-06 20:02:54.1321 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2020-04-06 20:10:09.5083 Info AppDomain Shutting down. Logger closing...
+2020-04-06 20:10:09.5126 Debug Stopping file watching for path '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees' filter 'nlog.config'
+2020-04-06 20:10:09.5232 Debug Closing logging configuration...
+2020-04-06 20:10:09.5240 Trace Closing File Target[logfile]
+2020-04-06 20:10:09.5247 Debug Closing target 'File Target[logfile]'.
+2020-04-06 20:10:09.5263 Debug Closed target 'File Target[logfile]'.
+2020-04-06 20:10:09.5265 Trace Closing '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt'
+2020-04-06 20:10:09.5265 Trace Closing Layout Renderer: ${literal}
+2020-04-06 20:10:09.5265 Trace Closing Layout Renderer: ${shortdate}
+2020-04-06 20:10:09.5265 Trace Closing Layout Renderer: ${literal}
+2020-04-06 20:10:09.5277 Trace Closing '${longdate} ${level:uppercase=true} ${message}'
+2020-04-06 20:10:09.5277 Trace Closing Layout Renderer: ${longdate}
+2020-04-06 20:10:09.5277 Trace Closing Layout Renderer: ${literal}
+2020-04-06 20:10:09.5277 Trace Closing Layout Renderer: ${uppercase}
+2020-04-06 20:10:09.5286 Trace Closing SimpleLayout=Layout Renderer: ${level}
+2020-04-06 20:10:09.5286 Trace Closing Layout Renderer: ${level}
+2020-04-06 20:10:09.5286 Trace Closing Layout Renderer: ${literal}
+2020-04-06 20:10:09.5286 Trace Closing Layout Renderer: ${message}
+2020-04-06 20:10:09.5286 Debug Finished closing logging configuration.
+2020-04-06 20:10:09.5298 Info Logger has been shut down.
+2020-04-06 20:10:18.5174 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-04-06 20:10:18.5569 Debug Found assembly location directory: '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-04-06 20:10:18.5578 Debug Search for auto loading files in location: /Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1
+2020-04-06 20:10:18.5627 Debug Start auto loading, location: /Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1
+2020-04-06 20:10:18.5644 Info Auto loading assembly file: /Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1/NLog.Extensions.Logging.dll
+2020-04-06 20:10:18.5646 Info Loading assembly file: /Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1/NLog.Extensions.Logging.dll
+2020-04-06 20:10:18.5755 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.6.2.1321. Product version: 1.6.2.
+2020-04-06 20:10:18.5758 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-04-06 20:10:18.5772 Info Auto loading assembly file: /Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1/NLog.Extensions.Logging.dll succeeded!
+2020-04-06 20:10:18.5788 Trace Assembly 'Microsoft.Extensions.Logging, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2020-04-06 20:10:18.5788 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2020-04-06 20:10:18.5796 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2020-04-06 20:10:18.5796 Debug Auto loading done
+2020-04-06 20:10:18.5796 Info Message Template Auto Format enabled
+2020-04-06 20:10:18.5940 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:10:18.5956 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-06 20:10:18.5999 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-04-06 20:10:18.6067 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2020-04-06 20:10:18.6067 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:10:18.6067 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:10:18.6081 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:10:18.6081 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-06 20:10:18.6108 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-04-06 20:10:18.6108 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-06 20:10:18.6108 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:10:18.6118 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:10:18.6118 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:10:18.6118 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-04-06 20:10:18.6128 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:10:18.6128 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-06 20:10:18.6181 Debug Setting 'FileTarget.name' to 'logfile'
+2020-04-06 20:10:18.6188 Debug Setting 'FileTarget.fileName' to '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt'
+2020-04-06 20:10:18.6188 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:10:18.6195 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2020-04-06 20:10:18.6195 Debug Setting 'FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2020-04-06 20:10:18.6195 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:10:18.6206 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-06 20:10:18.6206 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-04-06 20:10:18.6206 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2020-04-06 20:10:18.6206 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:10:18.6206 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:10:18.6206 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:10:18.6217 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-06 20:10:18.6217 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-04-06 20:10:18.6217 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-06 20:10:18.6217 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:10:18.6217 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:10:18.6226 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:10:18.6226 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-06 20:10:18.6226 Info Adding target FileTarget(Name=logfile)
+2020-04-06 20:10:18.6237 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-04-06 20:10:18.6237 Trace ParseRulesElement
+2020-04-06 20:10:18.6350 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2020-04-06 20:10:18.6409 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2020-04-06 20:10:18.7091 Debug Watching path '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees' filter 'nlog.config' for changes.
+2020-04-06 20:10:18.7103 Debug --- NLog configuration dump ---
+2020-04-06 20:10:18.7126 Debug Targets:
+2020-04-06 20:10:18.7126 Debug File Target[logfile]
+2020-04-06 20:10:18.7135 Debug Rules:
+2020-04-06 20:10:18.7153 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-04-06 20:10:18.7153 Debug --- End of NLog configuration dump ---
+2020-04-06 20:10:18.7192 Trace FindReachableObject<System.Object>:
+2020-04-06 20:10:18.7195 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2020-04-06 20:10:18.7195 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2020-04-06 20:10:18.7195 Trace  Scanning FileTarget 'File Target[logfile]'
+2020-04-06 20:10:18.7205 Trace   Scanning Property FileName ''/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt'' NLog.Layouts
+2020-04-06 20:10:18.7205 Trace   Scanning SimpleLayout ''/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt''
+2020-04-06 20:10:18.7205 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:10:18.7205 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:10:18.7205 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2020-04-06 20:10:18.7205 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:10:18.7217 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2020-04-06 20:10:18.7217 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2020-04-06 20:10:18.7217 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:10:18.7217 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-06 20:10:18.7225 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:10:18.7225 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-06 20:10:18.7225 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-04-06 20:10:18.7225 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-06 20:10:18.7225 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:10:18.7236 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:10:18.7236 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:10:18.7236 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-06 20:10:18.7236 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2020-04-06 20:10:18.7245 Trace   Scanning Property Encoding 'System.Text.UTF8Encoding+UTF8EncodingSealed' System.Text
+2020-04-06 20:10:18.7245 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2020-04-06 20:10:18.7245 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2020-04-06 20:10:18.7245 Info Found 14 configuration items
+2020-04-06 20:10:18.7262 Trace Initializing Layout Renderer: ${message}
+2020-04-06 20:10:18.7266 Trace Initializing Layout Renderer: ${literal}
+2020-04-06 20:10:18.7266 Trace Initializing Layout Renderer: ${level}
+2020-04-06 20:10:18.7266 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2020-04-06 20:10:18.7282 Trace FindReachableObject<System.Object>:
+2020-04-06 20:10:18.7282 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-06 20:10:18.7286 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:10:18.7286 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:10:18.7315 Trace Initializing Layout Renderer: ${uppercase}
+2020-04-06 20:10:18.7315 Trace Initializing Layout Renderer: ${literal}
+2020-04-06 20:10:18.7315 Trace Initializing Layout Renderer: ${longdate}
+2020-04-06 20:10:18.7315 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2020-04-06 20:10:18.7315 Trace FindReachableObject<System.Object>:
+2020-04-06 20:10:18.7315 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2020-04-06 20:10:18.7315 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:10:18.7315 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-06 20:10:18.7315 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:10:18.7325 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-06 20:10:18.7325 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-04-06 20:10:18.7325 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-06 20:10:18.7325 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:10:18.7325 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:10:18.7325 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:10:18.7325 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-06 20:10:18.7325 Trace Initializing Layout Renderer: ${literal}
+2020-04-06 20:10:18.7335 Trace Initializing Layout Renderer: ${shortdate}
+2020-04-06 20:10:18.7335 Trace Initializing Layout Renderer: ${literal}
+2020-04-06 20:10:18.7335 Trace Initializing '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt'
+2020-04-06 20:10:18.7335 Trace FindReachableObject<System.Object>:
+2020-04-06 20:10:18.7335 Trace Scanning SimpleLayout ''/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt''
+2020-04-06 20:10:18.7335 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:10:18.7335 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:10:18.7335 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2020-04-06 20:10:18.7345 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:10:18.7345 Trace Initializing File Target[logfile]
+2020-04-06 20:10:18.7357 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-04-06 20:10:18.7357 Trace Scanning FileTarget 'File Target[logfile]'
+2020-04-06 20:10:18.7357 Trace  Scanning Property FileName ''/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt'' NLog.Layouts
+2020-04-06 20:10:18.7357 Trace  Scanning SimpleLayout ''/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt''
+2020-04-06 20:10:18.7357 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2020-04-06 20:10:18.7357 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2020-04-06 20:10:18.7357 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2020-04-06 20:10:18.7365 Trace  Scanning Property Encoding 'System.Text.UTF8Encoding+UTF8EncodingSealed' System.Text
+2020-04-06 20:10:18.7365 Trace File Target[logfile] has 2 layouts
+2020-04-06 20:10:18.7365 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2020-04-06 20:11:56.1094 Info AppDomain Shutting down. Logger closing...
+2020-04-06 20:11:56.1115 Debug Stopping file watching for path '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees' filter 'nlog.config'
+2020-04-06 20:11:56.1137 Debug Closing logging configuration...
+2020-04-06 20:11:56.1137 Trace Closing File Target[logfile]
+2020-04-06 20:11:56.1147 Debug Closing target 'File Target[logfile]'.
+2020-04-06 20:11:56.1170 Debug Closed target 'File Target[logfile]'.
+2020-04-06 20:11:56.1170 Trace Closing '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt'
+2020-04-06 20:11:56.1178 Trace Closing Layout Renderer: ${literal}
+2020-04-06 20:11:56.1178 Trace Closing Layout Renderer: ${shortdate}
+2020-04-06 20:11:56.1178 Trace Closing Layout Renderer: ${literal}
+2020-04-06 20:11:56.1178 Trace Closing '${longdate} ${level:uppercase=true} ${message}'
+2020-04-06 20:11:56.1185 Trace Closing Layout Renderer: ${longdate}
+2020-04-06 20:11:56.1185 Trace Closing Layout Renderer: ${literal}
+2020-04-06 20:11:56.1185 Trace Closing Layout Renderer: ${uppercase}
+2020-04-06 20:11:56.1185 Trace Closing SimpleLayout=Layout Renderer: ${level}
+2020-04-06 20:11:56.1185 Trace Closing Layout Renderer: ${level}
+2020-04-06 20:11:56.1195 Trace Closing Layout Renderer: ${literal}
+2020-04-06 20:11:56.1195 Trace Closing Layout Renderer: ${message}
+2020-04-06 20:11:56.1195 Debug Finished closing logging configuration.
+2020-04-06 20:11:56.1195 Info Logger has been shut down.
+2020-04-06 20:18:36.2140 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-04-06 20:18:36.2658 Debug Found assembly location directory: '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-04-06 20:18:36.2669 Debug Search for auto loading files in location: /Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1
+2020-04-06 20:18:36.2710 Debug Start auto loading, location: /Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1
+2020-04-06 20:18:36.2727 Info Auto loading assembly file: /Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1/NLog.Extensions.Logging.dll
+2020-04-06 20:18:36.2727 Info Loading assembly file: /Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1/NLog.Extensions.Logging.dll
+2020-04-06 20:18:36.2853 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.6.2.1321. Product version: 1.6.2.
+2020-04-06 20:18:36.2856 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-04-06 20:18:36.2870 Info Auto loading assembly file: /Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/bin/Debug/netcoreapp3.1/NLog.Extensions.Logging.dll succeeded!
+2020-04-06 20:18:36.2883 Trace Assembly 'Microsoft.Extensions.Logging, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2020-04-06 20:18:36.2888 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2020-04-06 20:18:36.2888 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2020-04-06 20:18:36.2888 Debug Auto loading done
+2020-04-06 20:18:36.2896 Info Message Template Auto Format enabled
+2020-04-06 20:18:36.3018 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:18:36.3034 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-06 20:18:36.3069 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-04-06 20:18:36.3127 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2020-04-06 20:18:36.3127 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:18:36.3127 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:18:36.3144 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:18:36.3147 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-06 20:18:36.3173 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-04-06 20:18:36.3175 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-06 20:18:36.3175 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:18:36.3185 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:18:36.3185 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:18:36.3185 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-04-06 20:18:36.3185 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:18:36.3185 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-06 20:18:36.3243 Debug Setting 'FileTarget.name' to 'logfile'
+2020-04-06 20:18:36.3250 Debug Setting 'FileTarget.fileName' to '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt'
+2020-04-06 20:18:36.3250 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:18:36.3250 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2020-04-06 20:18:36.3263 Debug Setting 'FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2020-04-06 20:18:36.3263 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:18:36.3266 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-06 20:18:36.3266 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-04-06 20:18:36.3266 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2020-04-06 20:18:36.3266 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:18:36.3266 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:18:36.3266 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:18:36.3266 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-06 20:18:36.3266 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-04-06 20:18:36.3275 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-06 20:18:36.3275 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:18:36.3275 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:18:36.3275 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-06 20:18:36.3275 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-06 20:18:36.3275 Info Adding target FileTarget(Name=logfile)
+2020-04-06 20:18:36.3288 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-04-06 20:18:36.3288 Trace ParseRulesElement
+2020-04-06 20:18:36.3388 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2020-04-06 20:18:36.3424 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2020-04-06 20:18:36.4115 Debug Watching path '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees' filter 'nlog.config' for changes.
+2020-04-06 20:18:36.4128 Debug --- NLog configuration dump ---
+2020-04-06 20:18:36.4151 Debug Targets:
+2020-04-06 20:18:36.4160 Debug File Target[logfile]
+2020-04-06 20:18:36.4160 Debug Rules:
+2020-04-06 20:18:36.4180 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-04-06 20:18:36.4180 Debug --- End of NLog configuration dump ---
+2020-04-06 20:18:36.4213 Trace FindReachableObject<System.Object>:
+2020-04-06 20:18:36.4215 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2020-04-06 20:18:36.4215 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2020-04-06 20:18:36.4215 Trace  Scanning FileTarget 'File Target[logfile]'
+2020-04-06 20:18:36.4229 Trace   Scanning Property FileName ''/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt'' NLog.Layouts
+2020-04-06 20:18:36.4229 Trace   Scanning SimpleLayout ''/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt''
+2020-04-06 20:18:36.4229 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:18:36.4229 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:18:36.4237 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2020-04-06 20:18:36.4237 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:18:36.4237 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2020-04-06 20:18:36.4245 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2020-04-06 20:18:36.4245 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:18:36.4245 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-06 20:18:36.4245 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:18:36.4245 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-06 20:18:36.4258 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-04-06 20:18:36.4258 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-06 20:18:36.4258 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:18:36.4258 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:18:36.4266 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:18:36.4266 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-06 20:18:36.4266 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2020-04-06 20:18:36.4266 Trace   Scanning Property Encoding 'System.Text.UTF8Encoding+UTF8EncodingSealed' System.Text
+2020-04-06 20:18:36.4277 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2020-04-06 20:18:36.4277 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2020-04-06 20:18:36.4277 Info Found 14 configuration items
+2020-04-06 20:18:36.4289 Trace Initializing Layout Renderer: ${message}
+2020-04-06 20:18:36.4289 Trace Initializing Layout Renderer: ${literal}
+2020-04-06 20:18:36.4289 Trace Initializing Layout Renderer: ${level}
+2020-04-06 20:18:36.4297 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2020-04-06 20:18:36.4310 Trace FindReachableObject<System.Object>:
+2020-04-06 20:18:36.4310 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-06 20:18:36.4310 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:18:36.4316 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:18:36.4347 Trace Initializing Layout Renderer: ${uppercase}
+2020-04-06 20:18:36.4347 Trace Initializing Layout Renderer: ${literal}
+2020-04-06 20:18:36.4347 Trace Initializing Layout Renderer: ${longdate}
+2020-04-06 20:18:36.4355 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2020-04-06 20:18:36.4355 Trace FindReachableObject<System.Object>:
+2020-04-06 20:18:36.4355 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2020-04-06 20:18:36.4355 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:18:36.4355 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-06 20:18:36.4355 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:18:36.4366 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-06 20:18:36.4366 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-04-06 20:18:36.4366 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-06 20:18:36.4366 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:18:36.4366 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-06 20:18:36.4376 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:18:36.4376 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-06 20:18:36.4376 Trace Initializing Layout Renderer: ${literal}
+2020-04-06 20:18:36.4376 Trace Initializing Layout Renderer: ${shortdate}
+2020-04-06 20:18:36.4385 Trace Initializing Layout Renderer: ${literal}
+2020-04-06 20:18:36.4385 Trace Initializing '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt'
+2020-04-06 20:18:36.4385 Trace FindReachableObject<System.Object>:
+2020-04-06 20:18:36.4385 Trace Scanning SimpleLayout ''/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt''
+2020-04-06 20:18:36.4385 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-06 20:18:36.4396 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:18:36.4396 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2020-04-06 20:18:36.4396 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-06 20:18:36.4396 Trace Initializing File Target[logfile]
+2020-04-06 20:18:36.4417 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-04-06 20:18:36.4417 Trace Scanning FileTarget 'File Target[logfile]'
+2020-04-06 20:18:36.4417 Trace  Scanning Property FileName ''/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt'' NLog.Layouts
+2020-04-06 20:18:36.4417 Trace  Scanning SimpleLayout ''/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt''
+2020-04-06 20:18:36.4426 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2020-04-06 20:18:36.4426 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2020-04-06 20:18:36.4426 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2020-04-06 20:18:36.4426 Trace  Scanning Property Encoding 'System.Text.UTF8Encoding+UTF8EncodingSealed' System.Text
+2020-04-06 20:18:36.4435 Trace File Target[logfile] has 2 layouts
+2020-04-06 20:18:36.4435 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2020-04-06 20:18:52.5392 Info AppDomain Shutting down. Logger closing...
+2020-04-06 20:18:52.5422 Debug Stopping file watching for path '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees' filter 'nlog.config'
+2020-04-06 20:18:52.5448 Debug Closing logging configuration...
+2020-04-06 20:18:52.5448 Trace Closing File Target[logfile]
+2020-04-06 20:18:52.5456 Debug Closing target 'File Target[logfile]'.
+2020-04-06 20:18:52.5472 Debug Closed target 'File Target[logfile]'.
+2020-04-06 20:18:52.5472 Trace Closing '/Users/felipekosouski/Workspace/dotNet/CodeMazeAPIBook/CompanyEmployees/Project/logs/${shortdate}_logfile.txt'
+2020-04-06 20:18:52.5479 Trace Closing Layout Renderer: ${literal}
+2020-04-06 20:18:52.5479 Trace Closing Layout Renderer: ${shortdate}
+2020-04-06 20:18:52.5479 Trace Closing Layout Renderer: ${literal}
+2020-04-06 20:18:52.5486 Trace Closing '${longdate} ${level:uppercase=true} ${message}'
+2020-04-06 20:18:52.5486 Trace Closing Layout Renderer: ${longdate}
+2020-04-06 20:18:52.5486 Trace Closing Layout Renderer: ${literal}
+2020-04-06 20:18:52.5486 Trace Closing Layout Renderer: ${uppercase}
+2020-04-06 20:18:52.5486 Trace Closing SimpleLayout=Layout Renderer: ${level}
+2020-04-06 20:18:52.5486 Trace Closing Layout Renderer: ${level}
+2020-04-06 20:18:52.5496 Trace Closing Layout Renderer: ${literal}
+2020-04-06 20:18:52.5496 Trace Closing Layout Renderer: ${message}
+2020-04-06 20:18:52.5496 Debug Finished closing logging configuration.
+2020-04-06 20:18:52.5496 Info Logger has been shut down.

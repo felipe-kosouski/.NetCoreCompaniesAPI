@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using NLog;
+using AutoMapper;
 
 namespace CompanyEmployees
 {
@@ -35,6 +36,7 @@ namespace CompanyEmployees
 			services.ConfigureSqlContext(Configuration);
 			services.ConfigureRepositoryManager();
 			services.AddControllers();
+			services.AddAutoMapper(typeof(Startup));
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
