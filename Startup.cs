@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using NLog;
 using AutoMapper;
+using Contracts;
 
 namespace CompanyEmployees
 {
@@ -35,18 +36,23 @@ namespace CompanyEmployees
 			services.ConfigureLoggerService();
 			services.ConfigureSqlContext(Configuration);
 			services.ConfigureRepositoryManager();
-			services.AddControllers();
+			services.AddControllers(config => 
+			{
+				config.RespectBrowserAcceptHeader = true;
+				config.ReturnHttpNotAcceptable = true;
+			}).AddXmlDataContractSerializerFormatters();
 			services.AddAutoMapper(typeof(Startup));
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+		public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerManager logger)
 		{
 			if (env.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();
 			}
 
+			app.ConfigureExceptionHandler(logger);
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
 			app.UseCors("CorsPolicy");
@@ -54,6 +60,7 @@ namespace CompanyEmployees
 			{
 				ForwardedHeaders = ForwardedHeaders.All
 			});
+
 
 			app.UseRouting();
 

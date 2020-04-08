@@ -29,24 +29,26 @@ namespace CompanyEmployees.Controllers
 		[HttpGet]
 		public ActionResult GetCompanies()
 		{
-			try
-			{
-				var companies = _repository.Company.GetAllCompanies(trackChanges: false);
-				var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(companies);
-				return Ok(companiesDto);
-			}
-			catch (System.Exception ex)
-			{
-				_logger.LogError($"Something went wrong in the {nameof(GetCompanies)} action {ex}");
-				return StatusCode(500, "Internal Server Error");
-			}
+			var companies = _repository.Company.GetAllCompanies(trackChanges: false);
+			var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(companies);
+			return Ok(companiesDto);
 		}
 
 		// GET api/companies/5
 		[HttpGet("{id}")]
-		public ActionResult<string> GetstringById(int id)
+		public ActionResult GetCompany(Guid id)
 		{
-			return null;
+			var company = _repository.Company.GetCompany(id, trackChanges: false);
+			if (company == null)
+			{
+				_logger.LogInfo($"Company with id: {id} does not exist in the database");
+				return NotFound();
+			}
+			else
+			{
+				var companyDto = _mapper.Map<CompanyDto>(company);
+				return Ok(companyDto);
+			}
 		}
 
 		// POST api/companies
