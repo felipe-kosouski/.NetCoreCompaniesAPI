@@ -7,6 +7,7 @@ using CompanyEmployees.Dtos;
 using CompanyEmployees.ModelBinders;
 using CompanyEmployees.Models;
 using Contracts;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 //using CompanyEmployees.Models;
 
@@ -128,7 +129,7 @@ namespace CompanyEmployees.Controllers
 			var companyEntity = _repository.Company.GetCompany(id, trackChanges: true);
 			if (companyEntity == null)
 			{
-				_logger.LogInfo($"Company with id: {id} doesn't exist in the database."); 
+				_logger.LogInfo($"Company with id: {id} doesn't exist in the database.");
 				return NotFound();
 			}
 
@@ -152,6 +153,29 @@ namespace CompanyEmployees.Controllers
 			_repository.Company.DeleteCompany(company);
 			_repository.Save();
 
+			return NoContent();
+		}
+
+		[HttpPatch("{id}")]
+		public IActionResult PartiallyUpdateEmployeeForCompany(Guid id, [FromBody] JsonPatchDocument<CompanyForUpdateDto> patchDoc)
+		{
+			if (patchDoc == null)
+			{
+				_logger.LogError("patchDoc object sent from client is null.");
+				return BadRequest("patchDoc object is null");
+			}
+			var company = _repository.Company.GetCompany(id, trackChanges: false);
+			
+			if (company == null)
+			{
+				_logger.LogInfo($"Company with id: {id} doesn't exist in the database.");
+				return NotFound();
+			}
+
+			var companyToPatch = _mapper.Map<CompanyForUpdateDto>(company);
+			patchDoc.ApplyTo(companyToPatch);
+			_mapper.Map(companyToPatch, company);
+			_repository.Save();
 			return NoContent();
 		}
 	}

@@ -36,11 +36,13 @@ namespace CompanyEmployees
 			services.ConfigureLoggerService();
 			services.ConfigureSqlContext(Configuration);
 			services.ConfigureRepositoryManager();
-			services.AddControllers(config => 
+			services.AddControllers(config =>
 			{
 				config.RespectBrowserAcceptHeader = true;
 				config.ReturnHttpNotAcceptable = true;
-			}).AddXmlDataContractSerializerFormatters();
+			})
+				.AddNewtonsoftJson()
+				.AddXmlDataContractSerializerFormatters();
 			services.AddAutoMapper(typeof(Startup));
 		}
 
