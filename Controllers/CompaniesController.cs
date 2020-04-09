@@ -85,6 +85,12 @@ namespace CompanyEmployees.Controllers
 				return BadRequest("Company is null");
 			}
 
+			if (!ModelState.IsValid)
+			{
+				_logger.LogError("Invalid model state for the CompanyForCreationDto object");
+				return UnprocessableEntity(ModelState);
+			}
+
 			var companyEntity = _mapper.Map<Company>(company);
 			_repository.Company.CreateCompany(companyEntity);
 			_repository.Save();
@@ -126,6 +132,12 @@ namespace CompanyEmployees.Controllers
 				return BadRequest("CompanyForUpdateDto object is null");
 			}
 
+			if (!ModelState.IsValid)
+			{
+				_logger.LogError("Invalid model state for the CompanyForUpdateDto object");
+				return UnprocessableEntity(ModelState);
+			}
+
 			var companyEntity = _repository.Company.GetCompany(id, trackChanges: true);
 			if (companyEntity == null)
 			{
@@ -165,7 +177,7 @@ namespace CompanyEmployees.Controllers
 				return BadRequest("patchDoc object is null");
 			}
 			var company = _repository.Company.GetCompany(id, trackChanges: false);
-			
+
 			if (company == null)
 			{
 				_logger.LogInfo($"Company with id: {id} doesn't exist in the database.");
@@ -173,7 +185,13 @@ namespace CompanyEmployees.Controllers
 			}
 
 			var companyToPatch = _mapper.Map<CompanyForUpdateDto>(company);
-			patchDoc.ApplyTo(companyToPatch);
+			patchDoc.ApplyTo(companyToPatch, ModelState);
+			TryValidateModel(companyToPatch);
+			if (!ModelState.IsValid)
+			{
+				_logger.LogError("Invalid model state for the patch document");
+				return UnprocessableEntity(ModelState);
+			}
 			_mapper.Map(companyToPatch, company);
 			_repository.Save();
 			return NoContent();

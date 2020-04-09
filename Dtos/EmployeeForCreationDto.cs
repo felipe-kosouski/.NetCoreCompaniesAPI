@@ -1,9 +1,8 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace CompanyEmployees.Dtos
 {
-    public class EmployeeForCreationDto
-    {
-        public string Name { get; set; }
-		public int Age { get; set; }
-		public string Position { get; set; }
-    }
+	public class EmployeeForCreationDto : EmployeeForManipulationDto
+	{
+	}
 }
