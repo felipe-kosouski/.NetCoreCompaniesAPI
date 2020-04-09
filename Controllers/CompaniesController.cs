@@ -123,8 +123,19 @@ namespace CompanyEmployees.Controllers
 
 		// DELETE api/companies/5
 		[HttpDelete("{id}")]
-		public void DeletestringById(int id)
+		public IActionResult DeleteCompany(Guid id)
 		{
+			var company = _repository.Company.GetCompany(id, trackChanges: false);
+			if (company == null)
+			{
+				_logger.LogInfo($"Company with id: {id} doesn't exist in the database.");
+				return NotFound();
+			}
+
+			_repository.Company.DeleteCompany(company);
+			_repository.Save();
+
+			return NoContent();
 		}
 	}
 }

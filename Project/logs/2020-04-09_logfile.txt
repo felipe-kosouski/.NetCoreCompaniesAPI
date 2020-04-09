@@ -1,0 +1,1 @@
+2020-04-09 14:09:07.0723 INFO Company with id: 7f34b62d-2d1b-48aa-472f-08d7dc8aca37 does not exist in the database
