@@ -13,6 +13,12 @@ namespace CompanyEmployees.Data.Repository
 		{
 		}
 
+		public void CreateEmployeeForCompany(Guid companyId, Employee employee)
+		{
+			employee.CompanyId = companyId;
+			Create(employee);
+		}
+
 		public Employee GetEmployee(Guid companyId, Guid id, bool trackChanges)
 		{
 			return FindByCondition(e => e.CompanyId.Equals(companyId) && e.Id.Equals(id), trackChanges).SingleOrDefault();

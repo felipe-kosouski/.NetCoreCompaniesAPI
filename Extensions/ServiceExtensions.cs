@@ -1,6 +1,6 @@
 using CompanyEmployees.Data.Context;
 using CompanyEmployees.Data.Repository;
-using CompanyEmployees.Formaters.Output;
+// using CompanyEmployees.Formatters.Output;
 using Contracts;
 using LoggerService;
 using Microsoft.EntityFrameworkCore;
