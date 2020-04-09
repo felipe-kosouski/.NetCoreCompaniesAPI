@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using CompanyEmployees.Dtos;
+using CompanyEmployees.ModelBinders;
 using CompanyEmployees.Models;
 using Contracts;
 using Microsoft.AspNetCore.Mvc;
@@ -53,7 +54,7 @@ namespace CompanyEmployees.Controllers
 		}
 
 		[HttpGet("collection/({ids})", Name = "CompanyCollection")]
-		public IActionResult GetCompanyCollection(IEnumerable<Guid> ids)
+		public IActionResult GetCompanyCollection([ModelBinder(BinderType = typeof(ArrayModelBinder))] IEnumerable<Guid> ids)
 		{
 			if (ids == null)
 			{
