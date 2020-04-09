@@ -92,8 +92,32 @@ namespace CompanyEmployees.Controllers
 
 		// PUT api/employees/5
 		[HttpPut("{id}")]
-		public void Putstring(int id, string value)
+		public IActionResult UpdateEmployeeForCompany(Guid companyId, Guid id, EmployeeForUpdateDto employee)
 		{
+			if (employee == null)
+			{
+				_logger.LogError("EmployeeForUpdateDto object sent from client is null.");
+				return BadRequest("EmployeeForUpdateDto object is null");
+			}
+
+			var company = _repository.Company.GetCompany(companyId, trackChanges: false);
+			if (company == null)
+			{
+				_logger.LogInfo($"Company with id: {companyId} doesn't exist in the database.");
+				return NotFound();
+			}
+
+			var employeeEntity = _repository.Employee.GetEmployee(companyId, id, trackChanges: true);
+			if (employeeEntity == null)
+			{
+				_logger.LogInfo($"Employee with id: {id} doesn't exist in the database.");
+				return NotFound();
+			}
+
+			_mapper.Map(employee, employeeEntity);
+			_repository.Save();
+
+			return NoContent();
 		}
 
 		// DELETE api/employees/5
@@ -110,7 +134,7 @@ namespace CompanyEmployees.Controllers
 			var employeeForCompany = _repository.Employee.GetEmployee(companyId, id, trackChanges: false);
 			if (employeeForCompany == null)
 			{
-				_logger.LogInfo($"Employee with id: {id} doesn't exist in the database."); 
+				_logger.LogInfo($"Employee with id: {id} doesn't exist in the database.");
 				return NotFound();
 			}
 
