@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using CompanyEmployees.Data.Context;
 using Contracts;
 
@@ -38,9 +39,9 @@ namespace CompanyEmployees.Data.Repository
 			}
 		}
 
-		public void Save()
+		public Task SaveAsync()
 		{
-			_context.SaveChanges();
+			return _context.SaveChangesAsync();
 		}
 	}
 }
