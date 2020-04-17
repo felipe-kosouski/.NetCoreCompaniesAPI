@@ -6,9 +6,11 @@ using AutoMapper;
 using CompanyEmployees.ActionFilters;
 using CompanyEmployees.Dtos;
 using CompanyEmployees.Models;
+using CompanyEmployees.Models.RequestFeatures;
 using Contracts;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 //using CompanyEmployees.Models;
 
 namespace CompanyEmployees.Controllers
@@ -29,8 +31,12 @@ namespace CompanyEmployees.Controllers
 
 		// GET api/employees
 		[HttpGet]
-		public async Task<ActionResult> GetEmployeesForCompany(Guid companyId)
+		public async Task<ActionResult> GetEmployeesForCompany(Guid companyId, [FromQuery] EmployeeParameters employeeParameters)
 		{
+			if (!employeeParameters.ValidAgeRange)
+			{
+				return BadRequest("Max Age can't be less than min age.");
+			}
 			var company = await _repository.Company.GetCompanyAsync(companyId, trackChanges: false);
 			if (company == null)
 			{
@@ -38,7 +44,10 @@ namespace CompanyEmployees.Controllers
 				return NotFound();
 			}
 
-			var employeesFromDb = await _repository.Employee.GetEmployeesAsync(companyId, trackChanges: false);
+			var employeesFromDb = await _repository.Employee.GetEmployeesAsync(companyId, employeeParameters, trackChanges: false);
+
+			Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(employeesFromDb.MetaData));
+
 			var employeesDto = _mapper.Map<IEnumerable<EmployeeDto>>(employeesFromDb);
 			return Ok(employeesDto);
 		}
@@ -123,7 +132,7 @@ namespace CompanyEmployees.Controllers
 				_logger.LogError("patchDoc object sent from client is null.");
 				return BadRequest("patchDoc object is null");
 			}
-			
+
 			var employeeEntity = HttpContext.Items["employee"] as Employee;
 
 			var employeeToPatch = _mapper.Map<EmployeeForUpdateDto>(employeeEntity);

@@ -14,10 +14,7 @@ namespace CompanyEmployees.ActionFilters
 		{
 			_logger = logger;
 		}
-		public void OnActionExecuted(ActionExecutedContext context)
-		{
-			throw new System.NotImplementedException();
-		}
+		public void OnActionExecuted(ActionExecutedContext context) { }
 
 		public void OnActionExecuting(ActionExecutingContext context)
 		{
