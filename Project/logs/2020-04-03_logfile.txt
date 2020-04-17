@@ -1,8 +1,0 @@
-2020-04-03 15:42:54.0422 INFO Here is info message from our values controller.
-2020-04-03 15:42:54.0818 DEBUG Here is debug message from our values controller.
-2020-04-03 15:42:54.0833 WARN Here is warn message from our values controller.
-2020-04-03 15:42:54.0838 ERROR Here is an error message from our values controller.
-2020-04-03 15:43:57.2578 INFO Here is info message from our values controller.
-2020-04-03 15:43:57.2587 DEBUG Here is debug message from our values controller.
-2020-04-03 15:43:57.2637 WARN Here is warn message from our values controller.
-2020-04-03 15:43:57.2637 ERROR Here is an error message from our values controller.

@@ -1,15 +1,16 @@
 using System.Linq;
+using Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Microsoft.Extensions.Logging;
+using NLog;
 
 namespace CompanyEmployees.ActionFilters
 {
 	public class ValidationFilterAttribute : IActionFilter
 	{
-		private readonly ILogger _logger;
+		private readonly ILoggerManager _logger;
 
-		public ValidationFilterAttribute(ILogger logger)
+		public ValidationFilterAttribute(ILoggerManager logger)
 		{
 			_logger = logger;
 		}
