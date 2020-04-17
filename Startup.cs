@@ -16,6 +16,7 @@ using Microsoft.Extensions.Logging;
 using NLog;
 using AutoMapper;
 using Contracts;
+using CompanyEmployees.ActionFilters;
 
 namespace CompanyEmployees
 {
@@ -36,6 +37,9 @@ namespace CompanyEmployees
 			{
 				options.SuppressModelStateInvalidFilter = true;
 			});
+			services.AddScoped<ValidationFilterAttribute>();
+			services.AddScoped<ValidateCompanyExistsAttribute>();
+			services.AddScoped<ValidateEmployeeExistsAttribute>();
 			services.ConfigureCors();
 			services.ConfigureLoggerService();
 			services.ConfigureSqlContext(Configuration);
