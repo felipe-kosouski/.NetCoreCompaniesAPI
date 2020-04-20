@@ -1,11 +1,16 @@
+using System;
 using System.Linq;
+using System.Linq.Dynamic.Core;
+using System.Reflection;
+using System.Text;
+using CompanyEmployees.Extensions.Utility;
 using CompanyEmployees.Models;
 
 namespace CompanyEmployees.Extensions.RepositoryExtensions
 {
-    public static class RepositoryEmployeeExtensions
-    {
-        public static IQueryable<Employee> FilterEmployees(this IQueryable<Employee> employees, uint minAge, uint maxAge)
+	public static class RepositoryEmployeeExtensions
+	{
+		public static IQueryable<Employee> FilterEmployees(this IQueryable<Employee> employees, uint minAge, uint maxAge)
 		{
 			return employees.Where(e => (e.Age >= minAge && e.Age <= maxAge));
 		}
@@ -21,5 +26,22 @@ namespace CompanyEmployees.Extensions.RepositoryExtensions
 
 			return employees.Where(e => e.Name.ToLower().Contains(lowerCaseTerm));
 		}
-    }
+
+		public static IQueryable<Employee> Sort(this IQueryable<Employee> employees, string orderByQueryString)
+		{
+			if (string.IsNullOrWhiteSpace(orderByQueryString))
+			{
+				return employees.OrderBy(e => e.Name);
+			}
+
+			var orderQuery = OrderQueryBuilder.CreateOrderQuery<Employee>(orderByQueryString);
+			
+			if (string.IsNullOrWhiteSpace(orderQuery))
+			{
+				return employees.OrderBy(e => e.Name);
+			}
+			return employees.OrderBy(orderQuery);
+		}
+
+	}
 }

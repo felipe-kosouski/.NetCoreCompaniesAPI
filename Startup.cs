@@ -17,6 +17,9 @@ using NLog;
 using AutoMapper;
 using Contracts;
 using CompanyEmployees.ActionFilters;
+using CompanyEmployees.Contracts;
+using CompanyEmployees.Dtos;
+using CompanyEmployees.Data.DataShaping;
 
 namespace CompanyEmployees
 {
@@ -40,6 +43,7 @@ namespace CompanyEmployees
 			services.AddScoped<ValidationFilterAttribute>();
 			services.AddScoped<ValidateCompanyExistsAttribute>();
 			services.AddScoped<ValidateEmployeeExistsAttribute>();
+			services.AddScoped<IDataShaper<EmployeeDto>, DataShaper<EmployeeDto>>();
 			services.ConfigureCors();
 			services.ConfigureLoggerService();
 			services.ConfigureSqlContext(Configuration);
