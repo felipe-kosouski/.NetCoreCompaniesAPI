@@ -29,8 +29,15 @@ namespace CompanyEmployees.Controllers
 			_mapper = mapper;
 		}
 
+		[HttpOptions]
+		public IActionResult GetCompaniesOptions()
+		{
+			Response.Headers.Add("Allow", "GET, OPTIONS, POST");
+			return Ok();
+		}
+
 		// GET api/companies
-		[HttpGet]
+		[HttpGet(Name = "GetCompanies")]
 		public async Task<ActionResult> GetCompanies()
 		{
 			var companies = await _repository.Company.GetAllCompaniesAsync(trackChanges: false);
@@ -77,7 +84,7 @@ namespace CompanyEmployees.Controllers
 		}
 
 		// POST api/companies
-		[HttpPost]
+		[HttpPost(Name = "CreateCompany")]
 		[ServiceFilter(typeof(ValidationFilterAttribute))]
 		public async Task<ActionResult> CreateCompany(CompanyForCreationDto company)
 		{

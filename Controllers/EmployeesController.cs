@@ -38,6 +38,7 @@ namespace CompanyEmployees.Controllers
 
 		// GET api/employees
 		[HttpGet]
+		[HttpHead]
 		[ServiceFilter(typeof(ValidateMediaTypeAttribute))]
 		public async Task<ActionResult> GetEmployeesForCompany(Guid companyId, [FromQuery] EmployeeParameters employeeParameters)
 		{
