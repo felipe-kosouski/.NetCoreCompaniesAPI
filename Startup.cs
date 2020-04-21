@@ -20,6 +20,7 @@ using CompanyEmployees.ActionFilters;
 using CompanyEmployees.Contracts;
 using CompanyEmployees.Dtos;
 using CompanyEmployees.Data.DataShaping;
+using CompanyEmployees.Utility;
 
 namespace CompanyEmployees
 {
@@ -44,6 +45,8 @@ namespace CompanyEmployees
 			services.AddScoped<ValidateCompanyExistsAttribute>();
 			services.AddScoped<ValidateEmployeeExistsAttribute>();
 			services.AddScoped<IDataShaper<EmployeeDto>, DataShaper<EmployeeDto>>();
+			services.AddScoped<ValidateMediaTypeAttribute>();
+			services.AddScoped<EmployeeLinks>();
 			services.ConfigureCors();
 			services.ConfigureLoggerService();
 			services.ConfigureSqlContext(Configuration);
@@ -55,6 +58,7 @@ namespace CompanyEmployees
 			})
 				.AddNewtonsoftJson()
 				.AddXmlDataContractSerializerFormatters();
+			services.AddCustomMediaTypes();
 			services.AddAutoMapper(typeof(Startup));
 		}
 

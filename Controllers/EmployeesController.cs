@@ -8,6 +8,7 @@ using CompanyEmployees.Contracts;
 using CompanyEmployees.Dtos;
 using CompanyEmployees.Models;
 using CompanyEmployees.Models.RequestFeatures;
+using CompanyEmployees.Utility;
 using Contracts;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -23,17 +24,21 @@ namespace CompanyEmployees.Controllers
 		private readonly IRepositoryManager _repository;
 		private readonly ILoggerManager _logger;
 		private readonly IMapper _mapper;
-		private readonly IDataShaper<EmployeeDto> _dataShaper;
-		public EmployeesController(IRepositoryManager repository, ILoggerManager logger, IMapper mapper, IDataShaper<EmployeeDto> dataShaper)
+		private readonly EmployeeLinks _employeeLinks;
+		public EmployeesController(IRepositoryManager repository,
+									ILoggerManager logger,
+									IMapper mapper,
+									EmployeeLinks employeeLinks)
 		{
 			_repository = repository;
 			_logger = logger;
 			_mapper = mapper;
-			_dataShaper = dataShaper;
+			_employeeLinks = employeeLinks;
 		}
 
 		// GET api/employees
 		[HttpGet]
+		[ServiceFilter(typeof(ValidateMediaTypeAttribute))]
 		public async Task<ActionResult> GetEmployeesForCompany(Guid companyId, [FromQuery] EmployeeParameters employeeParameters)
 		{
 			if (!employeeParameters.ValidAgeRange)
@@ -52,7 +57,8 @@ namespace CompanyEmployees.Controllers
 			Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(employeesFromDb.MetaData));
 
 			var employeesDto = _mapper.Map<IEnumerable<EmployeeDto>>(employeesFromDb);
-			return Ok(_dataShaper.ShapeData(employeesDto, employeeParameters.Fields));
+			var links = _employeeLinks.TryGenerateLinks(employeesDto, employeeParameters.Fields, companyId, HttpContext);
+			return links.HasLinks ? Ok(links.LinkedEntities) : Ok(links.ShapedEntities);
 		}
 
 		// GET api/employees/5
