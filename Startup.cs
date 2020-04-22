@@ -21,6 +21,7 @@ using CompanyEmployees.Contracts;
 using CompanyEmployees.Dtos;
 using CompanyEmployees.Data.DataShaping;
 using CompanyEmployees.Utility;
+using CompanyEmployees.Auth;
 
 namespace CompanyEmployees
 {
@@ -47,11 +48,15 @@ namespace CompanyEmployees
 			services.AddScoped<IDataShaper<EmployeeDto>, DataShaper<EmployeeDto>>();
 			services.AddScoped<ValidateMediaTypeAttribute>();
 			services.AddScoped<EmployeeLinks>();
+			services.AddScoped<IAuthenticationManager, AuthenticationManager>();
 			services.ConfigureCors();
 			services.ConfigureLoggerService();
 			services.ConfigureSqlContext(Configuration);
 			services.ConfigureRepositoryManager();
 			services.ConfigureVersioning();
+			services.AddAuthentication();
+			services.ConfigureIdentity();
+			services.ConfigureJWT(Configuration);
 			services.AddControllers(config =>
 			{
 				config.RespectBrowserAcceptHeader = true;
@@ -83,6 +88,7 @@ namespace CompanyEmployees
 
 			app.UseRouting();
 
+			app.UseAuthentication();
 			app.UseAuthorization();
 
 			app.UseEndpoints(endpoints =>

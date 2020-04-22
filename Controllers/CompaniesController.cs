@@ -8,6 +8,7 @@ using CompanyEmployees.Dtos;
 using CompanyEmployees.ModelBinders;
 using CompanyEmployees.Models;
 using Contracts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 //using CompanyEmployees.Models;
@@ -38,7 +39,7 @@ namespace CompanyEmployees.Controllers
 		}
 
 		// GET api/companies
-		[HttpGet(Name = "GetCompanies")]
+		[HttpGet(Name = "GetCompanies"), Authorize(Roles = "Manager")]
 		public async Task<ActionResult> GetCompanies()
 		{
 			var companies = await _repository.Company.GetAllCompaniesAsync(trackChanges: false);
@@ -48,6 +49,7 @@ namespace CompanyEmployees.Controllers
 
 		// GET api/companies/5
 		[HttpGet("{id}", Name = "CompanyById")]
+		[ResponseCache(Duration = 60)]
 		public async Task<ActionResult> GetCompany(Guid id)
 		{
 			var company = await _repository.Company.GetCompanyAsync(id, trackChanges: false);
