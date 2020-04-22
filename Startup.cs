@@ -55,6 +55,7 @@ namespace CompanyEmployees
 			services.ConfigureRepositoryManager();
 			services.ConfigureVersioning();
 			services.AddAuthentication();
+			services.ConfigureSwagger();
 			services.ConfigureIdentity();
 			services.ConfigureJWT(Configuration);
 			services.AddControllers(config =>
@@ -85,6 +86,12 @@ namespace CompanyEmployees
 				ForwardedHeaders = ForwardedHeaders.All
 			});
 
+			app.UseSwagger();
+			app.UseSwaggerUI(s =>
+			{
+				s.SwaggerEndpoint("/swagger/v1/swagger.json", "Code Maze API v1");
+				s.SwaggerEndpoint("/swagger/v2/swagger.json", "Code Maze API v2");
+			});
 
 			app.UseRouting();
 
